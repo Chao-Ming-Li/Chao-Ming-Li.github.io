@@ -20,16 +20,20 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a PhD student in astroparticle physics working with the [Astroparticle Physics Theory group at DESY](https://astroparticle-physics.desy.de/about_us/group_members/theory/index_eng.html/). I am also affiliated with the School of Astronomy and Space Science and the Key Laboratory of Modern Astronomy and Astrophysics at Nanjing University.
-
-My research focuses on how energetic particles move through the Milky Way and how their transport shapes observable gamma-ray, X-ray, and neutrino emission. I develop numerical and theoretical models of cosmic-ray diffusion, advection, and interactions in environments ranging from pulsar halos to the circumgalactic medium.
+<section class="intro-card">
+  <p class="eyebrow">Researching the high-energy universe</p>
+  <p>I am a PhD student in astroparticle physics working with the <a href="https://astroparticle-physics.desy.de/about_us/group_members/theory/index_eng.html/">Astroparticle Physics Theory group at DESY</a>. I am also affiliated with the School of Astronomy and Space Science and the Key Laboratory of Modern Astronomy and Astrophysics at Nanjing University.</p>
+  <p>My research asks how energetic particles move through the Milky Way—and how that journey becomes visible in gamma rays, X-rays, and neutrinos. I develop numerical and theoretical models spanning pulsar halos, magnetic turbulence, and the circumgalactic medium.</p>
+</section>
 
 ## Research interests
 
-- Galactic cosmic-ray transport across the interstellar and circumgalactic media
-- Pulsar halos as probes of magnetic turbulence and anisotropic diffusion
-- Multi-messenger signatures of Galactic gamma-ray and neutrino sources
-- Numerical methods for transport equations over large spatial and temporal scales
+<div class="research-grid">
+  <div class="research-tile"><strong>Cosmic-ray transport</strong><span>Propagation across the interstellar and circumgalactic media.</span></div>
+  <div class="research-tile"><strong>Pulsar halos</strong><span>Magnetic turbulence and anisotropic diffusion around pulsars.</span></div>
+  <div class="research-tile"><strong>Multi-messenger signals</strong><span>Galactic gamma-ray, X-ray, and neutrino sources.</span></div>
+  <div class="research-tile"><strong>Numerical methods</strong><span>Transport equations over large spatial and temporal scales.</span></div>
+</div>
 
 ## Current work
 
