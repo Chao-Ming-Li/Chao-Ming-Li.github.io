@@ -1,65 +1,26 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
-description: A growing collection of your cool projects.
+title: research
+permalink: /research/
+description: Current research themes in cosmic-ray transport and high-energy astrophysics.
 nav: true
-nav_order: 3
-display_categories: [work, fun]
-horizontal: false
+nav_order: 2
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
+## Cosmic rays in the Galactic halo
 
-{% else %}
+I model cosmic-ray transport from the Galactic disk into the circumgalactic medium. This work compares conventional small-halo models with an extended halo reaching hundreds of kiloparsecs, with particular attention to secondary-to-primary ratios, cosmic-ray ages, gas distributions, and nuclear cross-section uncertainties.
 
-<!-- Display projects without categories -->
+[Read the 2026 preprint](https://arxiv.org/abs/2606.23317)
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
+## Pulsar halos and magnetic turbulence
 
-  <!-- Generate cards for each project -->
+The morphology of TeV pulsar halos records how electrons and positrons diffuse through the interstellar magnetic field. I develop anisotropic transport models that connect observable halo shapes to the Alfvénic Mach number and mean magnetic-field direction, and explore how X-ray observations can strengthen those constraints.
 
-{% if page.horizontal %}
+[Read the Physical Review D Letter](https://doi.org/10.1103/vt3s-rbj1)
 
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
-</div>
+## Diffuse Galactic emission
+
+I study the origin of diffuse gamma-ray and neutrino emission from the Milky Way, including the collective contribution of middle-aged pulsar halos and the connection between high-energy particles, interstellar gas, and radiation fields.
+
+[Read the Nature Astronomy article](https://doi.org/10.1038/s41550-024-02221-y)
