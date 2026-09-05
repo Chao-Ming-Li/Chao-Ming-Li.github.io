@@ -1,0 +1,218 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@use "sass:math";
+@use "sass:string";
+@use "variables" with (
+  $max-content-width: {{ site.max_width | default: "1040px" }}
+);
+@use "themes";
+@use "layout";
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+@use "tabs";
+@use "teachings";
+@use "typograms";
+
+:root {
+  --global-theme-color: #006d77;
+  --global-hover-color: #00a6a6;
+  --global-bg-color: #f4f8fb;
+  --global-card-bg-color: rgba(255, 255, 255, 0.86);
+  --global-text-color: #17324d;
+  --global-text-color-light: #587088;
+  --global-divider-color: rgba(23, 50, 77, 0.12);
+  --cm-accent: #f4a261;
+  --cm-deep: #061a2b;
+  --cm-glow: rgba(0, 166, 166, 0.2);
+}
+
+html[data-theme="dark"] {
+  --global-theme-color: #55d6c8;
+  --global-hover-color: #8be8dd;
+  --global-bg-color: #06111f;
+  --global-card-bg-color: rgba(12, 31, 49, 0.84);
+  --global-text-color: #e8f2f7;
+  --global-text-color-light: #9db2c4;
+  --global-divider-color: rgba(151, 211, 220, 0.16);
+  --cm-accent: #ffb76b;
+  --cm-deep: #020914;
+  --cm-glow: rgba(85, 214, 200, 0.18);
+}
+
+body {
+  background-color: var(--global-bg-color);
+  background-image:
+    radial-gradient(circle at 12% 8%, var(--cm-glow), transparent 24rem),
+    radial-gradient(circle at 88% 34%, rgba(70, 100, 210, 0.1), transparent 30rem);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.container {
+  max-width: 1040px;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--global-divider-color);
+  background: color-mix(in srgb, var(--global-bg-color) 82%, transparent) !important;
+  backdrop-filter: blur(18px) saturate(150%);
+}
+
+.navbar .nav-link {
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.post-header {
+  padding: 3.5rem 0 2rem;
+}
+
+.post-header .post-title {
+  max-width: 760px;
+  margin-bottom: 0.45rem;
+  background: linear-gradient(115deg, var(--global-text-color) 10%, var(--global-theme-color) 72%, var(--cm-accent));
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(3rem, 8vw, 6.4rem);
+  font-weight: 800;
+  letter-spacing: -0.065em;
+  line-height: 0.96;
+}
+
+.post-header .desc {
+  max-width: 660px;
+  color: var(--global-text-color-light);
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  letter-spacing: 0.025em;
+}
+
+.intro-card {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 2.75rem;
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1.4rem;
+  background: linear-gradient(140deg, var(--global-card-bg-color), color-mix(in srgb, var(--global-card-bg-color) 70%, var(--global-theme-color)));
+  box-shadow: 0 24px 70px rgba(3, 24, 43, 0.1);
+}
+
+.intro-card::after {
+  position: absolute;
+  top: -5rem;
+  right: -5rem;
+  width: 14rem;
+  height: 14rem;
+  border: 1px solid color-mix(in srgb, var(--global-theme-color) 42%, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2rem color-mix(in srgb, var(--global-theme-color) 5%, transparent), 0 0 0 4rem color-mix(in srgb, var(--global-theme-color) 3%, transparent);
+  content: "";
+}
+
+.intro-card p {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin-bottom: 1rem;
+  font-size: 1.12rem;
+}
+
+.eyebrow {
+  margin-bottom: 0.65rem !important;
+  color: var(--global-theme-color);
+  font-size: 0.82rem !important;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 3rem;
+}
+
+.research-tile {
+  padding: 1.35rem 1.45rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1rem;
+  background: var(--global-card-bg-color);
+  box-shadow: 0 10px 35px rgba(3, 24, 43, 0.055);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.research-tile:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--global-theme-color) 55%, transparent);
+  box-shadow: 0 18px 44px rgba(3, 24, 43, 0.1);
+}
+
+.research-tile strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--global-text-color);
+  font-size: 1.08rem;
+}
+
+.research-tile span {
+  color: var(--global-text-color-light);
+}
+
+h2 {
+  margin-top: 2.75rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.publications ol.bibliography > li {
+  margin-bottom: 1rem;
+  padding: 1.35rem 1.25rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 1rem;
+  background: var(--global-card-bg-color);
+  box-shadow: 0 8px 30px rgba(3, 24, 43, 0.05);
+}
+
+.publications .title {
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+.publications .abbr abbr {
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--global-theme-color) 14%, transparent);
+  color: var(--global-theme-color);
+  font-weight: 750;
+}
+
+.publications .links a.btn {
+  border-radius: 999px;
+}
+
+.social {
+  padding: 1.5rem 0 2rem;
+}
+
+@media (max-width: 640px) {
+  .post-header {
+    padding-top: 2rem;
+  }
+
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-card {
+    border-radius: 1rem;
+  }
+}
