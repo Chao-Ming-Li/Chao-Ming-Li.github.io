@@ -23,6 +23,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
+[Download CV (PDF)](/assets/pdf/CV_PhD.pdf)
+
 <section class="intro-card">
   <p class="eyebrow">Researching the high-energy universe</p>
   <p>I am a PhD student in astroparticle physics working with the <a href="https://astroparticle-physics.desy.de/about_us/group_members/theory/index_eng.html/">Astroparticle Physics Theory group at DESY</a>. I am also affiliated with the School of Astronomy and Space Science and the Key Laboratory of Modern Astronomy and Astrophysics at Nanjing University.</p>
