@@ -59,4 +59,4 @@ latest_posts:
 
 ## Current work
 
-My current work focuses on cosmic-ray transport in the Milky Way's extended circumgalactic medium (CGM) halo. I am extending my diffusion model to include advection, energy losses, and reacceleration. See the [publications](/publications/) and [research](/research/) pages for details.
+My current work focuses on cosmic-ray transport in the Milky Way's extended circumgalactic medium (CGM) halo. The diffusion model is presented in [Galactic Cosmic-Ray Transport in the Giant Circumgalactic Medium Halo](https://doi.org/10.3847/1538-4357/aeaba1), published in *The Astrophysical Journal* (2026). I am extending my diffusion model to include advection, energy losses, and reacceleration. See the [publications](/publications/) and [research](/research/) pages for details.
