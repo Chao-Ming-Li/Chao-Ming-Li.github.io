@@ -53,10 +53,10 @@ latest_posts:
 <div class="research-grid">
   <div class="research-tile"><strong>Cosmic-ray transport</strong><span>Propagation across the interstellar and circumgalactic media.</span></div>
   <div class="research-tile"><strong>Pulsar halos</strong><span>Magnetic turbulence and anisotropic diffusion around pulsars.</span></div>
-  <div class="research-tile"><strong>Multi-messenger signals</strong><span>Galactic gamma-ray, X-ray, and neutrino sources.</span></div>
-  <div class="research-tile"><strong>Numerical methods</strong><span>Transport equation solvers and Monto Carlo simulations</span></div>
+  <div class="research-tile"><strong>High-energy emission</strong><span>Galactic gamma-ray, X-ray, and neutrino sources.</span></div>
+  <div class="research-tile"><strong>Numerical methods</strong><span>Transport equation solvers and Monte Carlo simulations.</span></div>
 </div>
 
 ## Current work
 
-My recent work studies cosmic-ray propagation in an extended Galactic halo, and magnetic-field diagnostics from TeV pulsar-halo morphology. See the [publications](/publications/) and [research](/research/) pages for details.
+My current work focuses on cosmic-ray transport in the Milky Way's extended circumgalactic medium (CGM) halo. I am extending my diffusion model to include advection, energy losses, and reacceleration. See the [publications](/publications/) and [research](/research/) pages for details.
