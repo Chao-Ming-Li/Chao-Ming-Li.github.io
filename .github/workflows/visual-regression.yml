@@ -36,6 +36,8 @@ on:
 
 jobs:
   visual-regression:
+    # Compares against the upstream al-folio v0.16.3 tag, which only exists in the template repo.
+    if: github.repository == 'alshedivat/al-folio'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -47,7 +49,7 @@ jobs:
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3.5"
+          ruby-version: "3.3"
           bundler-cache: true
 
       - name: Setup Node 🧰
